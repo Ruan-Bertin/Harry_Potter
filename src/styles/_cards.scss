@@ -1,0 +1,50 @@
+.card{
+  position: relative;
+  perspective: 1000px;
+
+  .front,.back{
+    position: absolute;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    height: 55vh;
+    width: 15vw;
+
+    @media(max-width: 768px){
+      height: 60vh;
+      width: 60vw;
+    }
+  }
+
+  .front{
+    transform: rotateY(0deg);
+
+    img{
+      height: 55vh;
+      width: 15vw;
+      @media(max-width: 768px){
+        height: 60vh;
+        width: 60vw;
+      }
+    }
+  }
+
+  .back{
+    transform: rotateY(-180deg);
+    color: aliceblue;
+    border: 1px solid #708595;
+    
+
+    p,h3{
+      padding: 10px;
+    }
+  }
+
+  &:hover .front{
+    transform: rotateY(-180deg);
+  }
+
+  &:hover .back{
+    transform: rotateY(0deg);
+  }
+}

@@ -1,0 +1,58 @@
+@use 'variaveis';
+@use 'cards';
+
+body{
+  background-color: variaveis.$backgroud;
+  margin-bottom: 10vh;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10vh;
+
+  .logo-title{
+    width: 20vw;
+    height: 20vh;
+    @media(max-width:768px){
+      width: 60vw;
+      height: 20vh;
+    }
+    @media(max-width:375px){
+      height: 15vh;
+    }
+  }
+}
+
+.quadribol{
+  position: fixed;
+  right: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.hidden{
+  display: none;
+}
+
+.container{
+  max-width: 60vw;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 25vw;
+
+  @media (max-width: 768px){
+    grid-template-columns: 1fr;
+    gap: 40px;
+    row-gap: 95vw;
+  }
+
+  @media (max-width: 375px){
+    row-gap: 450px;
+    font-size: 14px;
+  }
+}
