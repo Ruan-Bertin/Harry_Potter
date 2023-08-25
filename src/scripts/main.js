@@ -21,14 +21,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   })
 
-  window.addEventListener('load', function () {
-    const titleImage = document.querySelector('.logo-title')
-    setTimeout(function () {
-      titleImage.style.opacity = 1
-      titleImage.style.transform = 'scale(1.05)'
-
-    }, 500)
-})
 })
 
 function hiddenQuadribol(){

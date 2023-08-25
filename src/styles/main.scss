@@ -11,17 +11,11 @@ body{
   align-items: center;
   justify-content: center;
   margin-bottom: 10vh;
+  margin: 0 15vw;
 
   .logo-title{
-    width: 20vw;
-    height: 20vh;
-    @media(max-width:768px){
-      width: 60vw;
-      height: 20vh;
-    }
-    @media(max-width:375px){
-      height: 15vh;
-    }
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -30,6 +24,14 @@ body{
   right: 0;
   width: 100px;
   height: 100px;
+  @media (max-width: 768px) and (min-width:376px){
+    width: 60px;
+    height: 60px;
+  }
+  @media (max-width: 375px){
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .hidden{
@@ -38,21 +40,25 @@ body{
 
 .container{
   max-width: 60vw;
-  min-height: 100vh;
+  min-height: 70vh;
   width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 25vw;
+  column-gap: 1%;
+  row-gap: 85vh;
+  font-size: 16px;
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) and (min-width:376px){
     grid-template-columns: 1fr;
     gap: 40px;
-    row-gap: 95vw;
+    row-gap: 78vh;
+    font-size: .9em;
   }
 
   @media (max-width: 375px){
-    row-gap: 450px;
-    font-size: 14px;
+    grid-template-columns: 1fr;
+    row-gap: 350px;
+    font-size: 12px;
   }
 }
